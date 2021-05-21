@@ -19,7 +19,7 @@ while True:
     wd.get("https://enabiz.gov.tr/AsiTakvimi?whichTab=True")
 
     msg = None
-    for elem in wd.find_elements_by_id("dvCovidAsi"):
+    for elem in wd.find_elements_by_xpath ("/html/body/div[2]/div[3]/div[2]/div/div[1]/div/div/div[1]/div[1]/div[2]"):
         msg = elem.text
     print(msg)
 
