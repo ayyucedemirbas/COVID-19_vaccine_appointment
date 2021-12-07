@@ -1,11 +1,12 @@
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import os
+
 from twilio.rest import Client
 from time import time, sleep
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from webdriver_manager.chrome import ChromeDriverManager
 
-wd_path="/home/ayyuce/chrome/chromedriver"  #do not forget to change the path
-wd = webdriver.Chrome(executable_path=wd_path)
+wd = webdriver.Chrome(ChromeDriverManager().install()) # Chrome options might be added if needed. driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=chrome_options)
 
 while True:
     
